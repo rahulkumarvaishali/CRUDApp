@@ -76,7 +76,7 @@ namespace CRUD.Controllers
         {
             RajaEntities dbObjs = new RajaEntities();
             var edititem=dbObjs.RajTbls.Where(m=>m.Id==Id).First();
-            RajTbl objcls = new RajTbl();
+            Test objcls = new Test();
 
             objcls.Id = edititem.Id;
             objcls.Name = edititem.Name;
