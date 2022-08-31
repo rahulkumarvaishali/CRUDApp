@@ -85,7 +85,7 @@ namespace CRUD.Controllers
             objcls.Mobile = edititem.Mobile;
             objcls.Pincode = edititem.Pincode;
 
-            return RedirectToAction("Form", objcls);
+            return View("Form", objcls);
 
         }
         public ActionResult About()
