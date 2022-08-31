@@ -1,0 +1,36 @@
+﻿@model List<CRUD.Models.Test>
+@{
+    ViewBag.Title = "Table";
+}
+
+<h2>Table</h2>
+<br />
+<table class="table table-bordered table-hover table-responsive">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Salary</th>
+        <th>Mobile</th>
+        <th>Pincode</th>
+        <th>Delete</th>
+        <th>Add</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Email</td>
+            <td>@item.Salary</td>
+            <td>@item.Mobile</td>
+            <td>@item.Pincode</td>
+            <td><a href="@Url.Action("Delete","Home",new  {item.Id})"class="btn btn-danger">Delete</a></td>
+            <td><a href="@Url.Action("Form","Home",new  {item.Id})"class="btn btn-primary">Add-Data</a></td>
+            <td><a href="@Url.Action("Edit","Home",new  {item.Id})"class="btn btn-success">Edit</a></td>
+        </tr>
+    }
+
+
+</table>
